@@ -30,6 +30,7 @@ html {
   --special-color: #906272;
   --background-color: #414141;
   --gray-text: #525252;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -331,6 +332,11 @@ footer h4 {
   .hero-intro {
     padding: 5rem 3rem;
   }
+  .burger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
   .burger span {
     padding: 0.2rem 2rem;
     background: var(--gray-text);
@@ -352,7 +358,20 @@ footer h4 {
     flex-direction: column;
     align-items: center;
   }
-
+  .nav-open {
+    transform: translateX(-100%);
+  }
+  .toggle .line1 {
+    transform: rotateZ(45deg) translateY(300%);
+    background: white;
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotateZ(-45deg) translateY(-300%);
+    background: white;
+  }
   /* About Section */
   .about-text div {
     padding: 3rem 3rem;
