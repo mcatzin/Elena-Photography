@@ -121,6 +121,7 @@ nav {
 
 .hero-intro p {
   padding: 5rem 10rem;
+  color: var(--gray-text);
 }
 
 .hero-intro h2 {
@@ -153,8 +154,9 @@ nav {
   z-index: -1;
   transform: translateY(10%) rotateZ(-10deg) rotateX(-90deg);
   animation: plant-entrance 1.5s ease-in-out 0.5s forwards,
-  plant-shake 2.5s infinite ease alternate-reverse 2s ;
+    plant-shake 2.5s infinite ease alternate-reverse 2s;
   transform-origin: bottom;
+  max-height: 80%;
 }
 
 .plant2 {
@@ -181,9 +183,87 @@ nav {
   }
 }
 @keyframes plant-shake {
-    from {
-      transform: rotateZ(-3deg);
-    }
-    to {
-      transform: rotateZ(0deg)
+  from {
+    transform: rotateZ(-3deg);
   }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+/* About Section */
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-text {
+  color: white;
+  background: var(--background-color);
+  flex: 2 1 40rem;
+  justify-content: space-around;
+}
+.about-text div {
+  padding: 3rem 8rem;
+}
+.about-text h3 {
+  padding: 2rem 0rem;
+  font-family: "Ruhl Medium";
+}
+.about-image {
+  flex: 1 1 40rem;
+  position: relative;
+}
+.about-text h2 {
+  font-family: "Vibes";
+  padding: 4rem;
+}
+.about-image h5 {
+  position: absolute;
+  letter-spacing: 2rem;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Gallery Section */
+@media screen and (max-width: 842px) {
+  .hero {
+    width: 100%;
+  }
+  .hero-intro {
+    padding: 5rem 3rem;
+  }
+  .burger span {
+    padding: 0.2rem 2rem;
+    background: var(--gray-text);
+    margin: 0.5rem 0rem;
+    display: block;
+  }
+  .nav-links a {
+    color: white;
+    font-size: var(--header3);
+    text-decoration: underline;
+  }
+  .nav-links {
+    background: var(--background-color);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* About Section */
+  .about-text div {
+    padding: 3rem 3rem;
+  }
+}
